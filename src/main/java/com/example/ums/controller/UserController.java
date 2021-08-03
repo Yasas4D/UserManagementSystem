@@ -4,6 +4,7 @@ import com.example.ums.model.User;
 import com.example.ums.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,6 +21,12 @@ public class UserController {
     public List<User> getAllUsers() {
         System.out.println("Request received to the controller");
         return userService.getAllUsers();
+    }
+
+    @GetMapping(path = "/users/{id}")
+    public User getUser(@PathVariable int id) {
+        System.out.println("Request received to the controller");
+        return userService.searchUser(id);
     }
 }
 
