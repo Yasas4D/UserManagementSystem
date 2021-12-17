@@ -33,9 +33,10 @@ public class UserController {
         return userList.get(userList.size() - 1);
     }
 
-    @DeleteMapping("/cache")
-    public void removeUser() {
-//        taskFacade.clearCache();
+    @DeleteMapping(path = "/users/{id}")
+    public boolean removeUser(@PathVariable int id) {
+        System.out.println("Request received to the controller");
+        return userService.removeUser(id);
     }
 }
 

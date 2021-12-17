@@ -43,5 +43,16 @@ public class UserService {
         return userRepository.findAll();
     }
 
+    @CacheEvict(value = "allUserCache", allEntries = true)
+    public boolean removeUser(int id) {
+        System.out.println("Getting the user from DB!");
+        if (userRepository.findById(id).isPresent()){
+            userRepository.deleteById(id);
+            System.out.println("Successfully deleted the user!");
+            return true;
+        }
+        System.out.println("User Not Found!");
+        return false;
+    }
 
 }
