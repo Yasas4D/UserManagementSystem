@@ -2,7 +2,7 @@
 
 A Basic user management system for demonstrate cache implementation.
 
-Full guide to the tutorial : [Please wait! :) ]
+Full guide - Link to the tutorial : [Please wait! :) ]
 
 # API Endpoints
 
