@@ -2,7 +2,7 @@
 
 A Basic user management system for demonstrate cache implementation.
 
-Full guide - Link to the tutorial : [Please wait! :) ]
+Full guide - Link to the tutorial : https://betterprogramming.pub/spring-boot-caching-from-scratch-aaaf9717f407
 
 # API Endpoints
 
